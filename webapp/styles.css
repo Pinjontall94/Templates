@@ -1,0 +1,40 @@
+/* Remember!
+ *   1. Position & Padding
+ *   2. Font stuff
+ *   3. Box & Border (color)
+ *   4. Text (color)
+ *   5. Other (animations) */
+
+/* Universal selectors */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --body-bg: #eee;
+    --text-color: #000;
+}
+
+.dark_mode {
+    --body-bg: #222;
+    --text-color: #fcd9d9;
+}
+
+body {
+    background-color: var(--body-bg);
+}
+
+.app {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+}
+
+.app__text {
+    color: var(--text-color);
+}

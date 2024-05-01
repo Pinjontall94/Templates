@@ -1,0 +1,28 @@
+[Desktop Entry]
+
+# The type as listed above
+Type=Application
+
+# The version of the desktop entry specification to which this file complies
+Version=1.1.6
+
+# The name of the application
+Name=VCV Rack
+
+# A comment which can/will be used as a tooltip
+Comment=The Eurorack Simulator
+
+# The path to the folder in which the executable is run
+Path=~/programs/Rack
+
+# The executable of the application, possibly with arguments.
+Exec=rack -s ~/programs/Rack
+
+# The name of the icon that will be used to display this entry
+Icon=~/programs/Rack/vcv.png
+
+# Describes whether this application needs to be run in a terminal or not
+Terminal=false
+
+# Describes the categories in which this entry should be shown
+Categories=Music;Art;
