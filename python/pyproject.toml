@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "spam-eggs"
+version = "2020.0.0"
+dependencies = [
+  "pytest>=6.0",
+  "autopep8>=2.1.0",
+  "pylint>=3.1.0",
+]
+requires-python = ">=3.8"
+authors = [
+  {name = "Sam Johnson", email = "sambjohnson94@protonmail.com"},
+]
+maintainers = [
+  {name = "Sam Johnson", email = "sambjohnson94@protonmail.com"}
+]
+description = "Lovely Spam! Wonderful Spam!"
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["egg", "bacon", "sausage", "tomatoes", "Lobster Thermidor"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python"
+]
+
+[project.urls]
+Repository = "https://github.com/me/spam.git"
+"Bug Tracker" = "https://github.com/me/spam/issues"
+Changelog = "https://github.com/me/spam/blob/master/CHANGELOG.md"
+
+[project.scripts]
+spam-cli = "spam:main_cli"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = ["tests"]

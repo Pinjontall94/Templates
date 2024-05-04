@@ -8,7 +8,7 @@ OPT=-O0
 DEPFLAGS=-MP -MD
 WARNINGS=-Wall -Wextra -pedantic
 # Tell make to load specified libraries and add /usr/local/include to ld path
-LDLIBS=-lSDL2
+LDLIBS=
 LDFLAGS=-L/usr/local/include
 CFLAGS=$(WARNINGS) -g -std=c2x $(foreach D,$(INCLUDEDIRS),-I$(D)) $(OPT) $(DEPFLAGS)
 
@@ -30,7 +30,7 @@ $(BINARY): $(OBJECTS)
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean:
-	rm -rf $(BINARY) $(OBJECTS) $(DEPFILES)
+	rm -f $(BINARY) $(OBJECTS) $(DEPFILES)
 	[ -f "$(BINARY)" ] || rmdir bin
 
 distribute: clean
