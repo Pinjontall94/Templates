@@ -1,0 +1,15 @@
+APP := hello_world
+all: $(APP)
+
+run: $(APP)
+	@./$(APP)
+
+.PHONY: test
+test: test.c
+	gcc -o test_runner $^ -lcunit
+	@./test_runner
+
+.PHONY: clean
+clean:
+	@[ ! -f "$(APP)" ] || rm -v $(APP)
+	@[ ! -f "test_runner" ] || rm -v test_runner
