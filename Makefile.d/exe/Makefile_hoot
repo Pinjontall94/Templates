@@ -1,0 +1,13 @@
+HOOTFLAGS=compile-wasm --bundle
+
+all: demo.wasm
+
+demo.wasm: demo.scm
+	guild $(HOOTFLAGS) -o $@ $^
+
+clean: demo.wasm reflect.js reflect.wasm wtf8.wasm
+	rm -f $^ 2>/dev/null
+
+.PHONY: serve
+serve: all
+	guile -c '((@ (hoot web-server) serve))'
